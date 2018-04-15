@@ -9,6 +9,7 @@ global.vue.lang = global.vue.lang || {}
 function resolveImport (dependencyManager) {
   return function (url, prev, done) {
     let resolvedFilename
+    console.log(url);
     url = url.replace(/^["']?(.*?)["']?$/, '$1')
     if (url.indexOf('~') === 0 || url.indexOf('/') === 0) {
       resolvedFilename = url.substr(1)
